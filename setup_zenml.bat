@@ -1,0 +1,4 @@
+zenml integration install mlflow -y
+zenml experiment-tracker register mlflow_tracker --flavor=mlflow
+zenml model-deployer register mlflow_deployer --flavor=mlflow
+zenml stack register mlflow_stack -a default -o default -d mlflow_deployer -e mlflow_tracker --set
